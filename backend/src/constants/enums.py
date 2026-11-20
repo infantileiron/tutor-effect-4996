@@ -1,3 +1,6 @@
 ROLES=('admin','analyst','viewer')
 REPORT_STATUSES=('queued','running','completed','failed')
+RD_REPORT_STATUSES=('queued','running','completed','inconclusive','failed','invalid')
+ELIGIBILITY_BATCH_STATUSES=('draft','locking','locked')
+ELIGIBILITY_DIRECTIONS=('gte','lte')
 GROUPS=('control','intervention')

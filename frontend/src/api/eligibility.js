@@ -1,0 +1,12 @@
+import{request,post}from'./client.js';
+export const getBatches=()=>request('/eligibility/batches');
+export const getBatch=id=>request('/eligibility/batches/'+id);
+export const getRoster=id=>request('/eligibility/batches/'+id+'/roster');
+export const createBatch=data=>post('/eligibility/batches',data);
+export const updateBatch=(id,data)=>request('/eligibility/batches/'+id,{method:'PUT',body:JSON.stringify(data)});
+export const addCandidate=(id,data)=>post('/eligibility/batches/'+id+'/candidates',data);
+export const removeCandidate=(id,studentId)=>request('/eligibility/batches/'+id+'/candidates/'+studentId,{method:'DELETE'});
+export const lockBatch=id=>post('/eligibility/batches/'+id+'/lock',{});
+export const recoverBatch=id=>post('/eligibility/batches/'+id+'/recover',{});
+export const recordParticipation=(id,data)=>post('/eligibility/batches/'+id+'/participation',data);
+export const addCorrection=(id,data)=>post('/eligibility/batches/'+id+'/corrections',data);
